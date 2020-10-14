@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="EstilosTextView" parent="Theme.MaterialComponents">
+        <item name="textInputStyle">@style/Theme.MaterialComponents</item>
+    </style>
+</resources>
