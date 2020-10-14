@@ -12,6 +12,11 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/navigation_maps"
+        android:name="com.example.appsenasoft2020.ui.maps.MapsFragment"
+        android:label="@string/title_maps"
+        tools:layout="@layout/fragment_home" />
+    <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.appsenasoft2020.ui.dashboard.DashboardFragment"
         android:label="@string/title_account"
@@ -22,4 +27,8 @@
         android:name="com.example.appsenasoft2020.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_gp"
+        android:name="com.example.appsenasoft2020.ui.groups.GroupsFragment"
+        android:label="GroupsFragment" />
 </navigation>
