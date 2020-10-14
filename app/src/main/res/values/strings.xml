@@ -5,4 +5,5 @@
     <string name="title_notifications">Notificaciones</string>
     <string name="title_maps">Mapas</string>
     <string name="title_gp">Grupos</string>
+    <string name="Start">Origen</string>
 </resources>

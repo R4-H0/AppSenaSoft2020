@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1007347649036",
+    "firebase_url": "https://appsenasoft-9198e.firebaseio.com",
+    "project_id": "appsenasoft-9198e",
+    "storage_bucket": "appsenasoft-9198e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007347649036:android:ba3c519b95925179ebfc29",
+        "android_client_info": {
+          "package_name": "com.example.appsenasoft2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007347649036-hgr425aqa8jrcc9ueork80a3ilrpfp5a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appsenasoft2020",
+            "certificate_hash": "a609bdf8affdd27dbcc9f56b458ec7419dd11dee"
+          }
+        },
+        {
+          "client_id": "1007347649036-42egodu868p09i7i88evg56uvvnlt5oh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeuHmuC-di469NAqOvECAByyjlBYajSgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007347649036-42egodu868p09i7i88evg56uvvnlt5oh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
