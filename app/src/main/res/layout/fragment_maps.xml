@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mapas">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/text_maps"
@@ -13,4 +13,5 @@
         android:text="TextView"
         tools:layout_editor_absoluteX="51dp"
         tools:layout_editor_absoluteY="83dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

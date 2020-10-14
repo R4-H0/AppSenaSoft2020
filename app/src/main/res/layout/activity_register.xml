@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondor">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="SELECCIONA TU ROL"
+        android:textColor="#399500"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="359dp"
+        android:layout_height="44dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Dinos que tipo de usuarios seras en nuestra aplicación. Lo podras cambiar más adelante."
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Conductor"
+        android:textColor="#FF9800"
+        android:textColorHighlight="#D31C1C"
+        android:textColorHint="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Pasajero"
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="227dp"
+        android:layout_height="477dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_register" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="161dp"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/ic_car1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="578dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="169dp"
+        android:layout_height="168dp"
+        app:srcCompat="@drawable/ic_pasajero"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="570dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

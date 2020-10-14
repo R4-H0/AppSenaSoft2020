@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formulario de Inscripción"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/default1"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="126dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/default1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="364dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="134dp"
+        android:layout_height="105dp"
+        app:srcCompat="@drawable/default1"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="490dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos Personales"
+        android:textColor="#FF9800"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="205dp"
+        android:layout_height="39dp"
+        android:text="Ingresa los datos que nos ayudaran a conocer y a poder contactarte."
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Falta"
+        android:textColor="#FB0000"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos de la Empresa"
+        android:textColor="#FF9800"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="222dp"
+        android:layout_height="45dp"
+        android:text="Datos de la empresa a la cual perteneces."
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="530dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Falta"
+        android:textColor="#F44336"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="575dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="136dp"
+        android:layout_height="91dp"
+        app:srcCompat="@drawable/default1"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="617dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos del Vehiculo"
+        android:textColor="#FF9800"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="622dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="224dp"
+        android:layout_height="55dp"
+        android:text="Dinos como es tu vehiculo para poder registrar tus puntos y puedas redimirlos."
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="641dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Falta"
+        android:textColor="#F41100"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="696dp" />
+
+    <Button
+        android:id="@+id/btnDatosPersonales"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="394dp"
+        android:layout_height="143dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <Button
+        android:id="@+id/btnDatosEmpresa"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="417dp"
+        android:layout_height="129dp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="482dp" />
+
+    <Button
+        android:id="@+id/btnDatosVehiculo"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="405dp"
+        android:layout_height="130dp"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="598dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
