@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AppSenaSoft2020</string>
     <string name="title_home">Inicio</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_account">Perfil</string>
     <string name="title_notifications">Notificaciones</string>
     <string name="title_maps">Mapas</string>
     <string name="title_gp">Grupos</string>
