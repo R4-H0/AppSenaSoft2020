@@ -22,6 +22,8 @@ import com.huawei.hms.support.hwid.request.HuaweiIdAuthParamsHelper
 
 
 import com.example.appsenasoft2020.R
+import com.example.appsenasoft2020.RegisterActivity
+import com.example.appsenasoft2020.RegisterForm
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -145,8 +147,11 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
-            register.setOnClickListener{
 
+
+            register.setOnClickListener{
+              var intent:Intent = Intent(this@LoginActivity, RegisterForm::class.java)
+                startActivity(intent)
             }
 
 
