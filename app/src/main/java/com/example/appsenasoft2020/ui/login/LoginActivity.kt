@@ -14,9 +14,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.core.view.get
 
 
 import com.example.appsenasoft2020.R
+import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,9 +28,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_login)
-/*
-        val username = findViewById<EditText>(R.id.username)
-        val password = findViewById<EditText>(R.id.username)
+
+        val username = findViewById<TextInputLayout>(R.id.username)
+        val password = findViewById<TextInputLayout>(R.id.pass)
         val login = findViewById<Button>(R.id.idBotonInicio)
         val loading = findViewById<ProgressBar>(R.id.loading)
 
@@ -67,16 +69,16 @@ class LoginActivity : AppCompatActivity() {
 
         username.afterTextChanged {
             loginViewModel.loginDataChanged(
-                username.text.toString(),
-                password.text.toString()
+                username.toString(),
+                password.toString()
             )
         }
 
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                    username.text.toString(),
-                    password.text.toString()
+                    username.getText().ToString(),
+                    password.toString()
                 )
             }
 
@@ -84,8 +86,8 @@ class LoginActivity : AppCompatActivity() {
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE ->
                         loginViewModel.login(
-                            username.text.toString(),
-                            password.text.toString()
+                            username.toString(),
+                            password.toString()
                         )
                 }
                 false
@@ -93,9 +95,9 @@ class LoginActivity : AppCompatActivity() {
 
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
-                loginViewModel.login(username.text.toString(), password.text.toString())
+                loginViewModel.login(username.toString(), password.toString())
             }
-        }*/
+        }
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {

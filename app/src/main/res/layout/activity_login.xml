@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/email"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:endIconMode="clear_text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.389"
         tools:layout_editor_absoluteX="45dp">
@@ -52,12 +53,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedTextField"
+        android:id="@+id/pass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="360dp"
         android:hint="@string/clave"
+
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,11 +85,12 @@
         app:srcCompat="@drawable/ic_loginlogo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonHuawei"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="109dp"
         android:layout_height="49dp"
         android:layout_marginTop="24dp"
+        android:background="@drawable/logoew"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -102,6 +106,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonHuawei" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
