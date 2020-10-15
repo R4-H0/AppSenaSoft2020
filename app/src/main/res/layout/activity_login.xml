@@ -111,10 +111,21 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="707dp"
-        android:layout_height="892dp"
+        android:layout_width="924dp"
+        android:layout_height="899dp"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/buttonHuawei"
         app:srcCompat="@drawable/img_0"
-        tools:layout_editor_absoluteX="-181dp" />
+        tools:layout_editor_absoluteX="-366dp" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrate"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="630dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

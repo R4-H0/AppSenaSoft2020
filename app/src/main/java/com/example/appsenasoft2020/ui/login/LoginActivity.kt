@@ -13,10 +13,12 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
+import com.example.appsenasoft2020.MainActivity
+import com.huawei.hms.common.ApiException
+import com.huawei.hms.support.hwid.HuaweiIdAuthManager
+import com.huawei.hms.support.hwid.request.HuaweiIdAuthParams
+import com.huawei.hms.support.hwid.request.HuaweiIdAuthParamsHelper
 
 
 import com.example.appsenasoft2020.R
@@ -24,6 +26,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.huawei.hms.support.hwid.service.HuaweiIdAuthService
 import java.lang.Exception
 
 class LoginActivity : AppCompatActivity() {
@@ -38,6 +41,19 @@ class LoginActivity : AppCompatActivity() {
         val password:TextInputEditText = findViewById(R.id.clave)
         val login = findViewById<Button>(R.id.idBotonInicio)
         val loading = findViewById<ProgressBar>(R.id.loading)
+        val register = findViewById<TextView>(R.id.btnRegistro)
+        val loginHuawei = findViewById<ImageView>(R.id.buttonHuawei)
+
+        val authParams =
+            HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setAuthorizationCode()
+                .createParams()
+
+        val service = HuaweiIdAuthManager.getService(this@LoginActivity, authParams)
+
+        loginHuawei.setOnClickListener{
+            startActivityForResult(service.signInIntent, 8888)
+        }
+
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)
@@ -82,10 +98,11 @@ class LoginActivity : AppCompatActivity() {
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                    username.getText().toString() ,
+                    username.getText().toString(),
                     password.getText().toString()
                 )
             }
+
 
             setOnEditorActionListener { _, actionId, _ ->
                 when (actionId) {
@@ -109,7 +126,8 @@ class LoginActivity : AppCompatActivity() {
                                     // Sign in success, update UI with the signed-in user's information
                                     val user = Firebase.auth.currentUser
                                     Toast.makeText(this@LoginActivity,"Se inicio con exito",Toast.LENGTH_SHORT).show()
-                                 
+                                     var intent:Intent = Intent(this@LoginActivity,MainActivity::class.java)
+                                    startActivity(intent)
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(
@@ -126,6 +144,12 @@ class LoginActivity : AppCompatActivity() {
 
                 }
             }
+
+            register.setOnClickListener{
+
+            }
+
+
         }
     }
 
@@ -142,6 +166,22 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int,  data: Intent?) {
+// Process the authorization result and obtain the authorization code from AuthHuaweiId.
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 8888) {
+            val authHuaweiIdTask = HuaweiIdAuthManager.parseAuthResultFromIntent(data)
+            if (authHuaweiIdTask.isSuccessful) {
+                // The sign-in is successful, and the user's HUAWEI ID information and authorization code are obtained.
+                val huaweiAccount = authHuaweiIdTask.result
+                Log.i("Huawei", "Inicio huawei:" + huaweiAccount.authorizationCode)
+            } else {
+                // The sign-in failed.
+                Log.e("Huawei", "No inicio Huawei : " + (authHuaweiIdTask.exception as ApiException).statusCode)
+            }
+        }
     }
 }
 
