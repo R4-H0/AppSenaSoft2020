@@ -22,10 +22,10 @@ class datosPersonalesFragment : Fragment() {
         datosPersonalesViewModel =
                 ViewModelProvider(this).get(datosPersonalesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_register_conductor, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        datosPersonalesViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        //val textView: TextView = root.findViewById(R.id.text_home)
+        //datosPersonalesViewModel.text.observe(viewLifecycleOwner, Observer {
+        //    textView.text = it
+        //})
         return root
     }
 }

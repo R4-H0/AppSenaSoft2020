@@ -22,10 +22,10 @@ class MapsFragment : Fragment() {
         mapsViewModel =
                 ViewModelProvider(this).get(MapsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_maps, container, false)
-        val textView: TextView = root.findViewById(R.id.text_maps)
-        mapsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        //val textView: TextView = root.findViewById(R.id.text_maps)
+        //mapsViewModel.text.observe(viewLifecycleOwner, Observer {
+        //    textView.text = it
+        //})
         return root
     }
 }

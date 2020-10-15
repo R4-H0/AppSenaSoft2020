@@ -22,10 +22,10 @@ class GroupsFragment : Fragment() {
         groupsViewModel =
                 ViewModelProvider(this).get(GroupsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_groups, container, false)
-        val textView: TextView = root.findViewById(R.id.tvGroups)
-        groupsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+       // val textView: TextView = root.findViewById(R.id.tvGroups)
+        //groupsViewModel.text.observe(viewLifecycleOwner, Observer {
+        //    textView.text = it
+       // })
         return root
     }
 }

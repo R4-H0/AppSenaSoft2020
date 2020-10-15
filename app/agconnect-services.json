@@ -1,12 +1,12 @@
 {
 	"client":{
 		"cp_id":"2640057000002393023",
-		"product_id":"736430079244660175",
-		"client_id":"468920685255722176",
-		"client_secret":"5348EA74526E41C74698BD283E31008931D522C756E5697DD8715C91ED0F7BBC",
-		"app_id":"103013727",
-		"package_name":"com.sena.appsenasoft",
-		"api_key":"CgB6e3x9lYkSCh21PbhPyDBk0yTP+CuSI9JiFibnZhkglf3mNf7t+HC564h813HU0BO7PWQ9/JbkL/JW2JvduA1X"
+		"product_id":"736430079244668391",
+		"client_id":"474094671446934592",
+		"client_secret":"D68A4A5F1748C69C05A3A42900CA79124CA37CF65449304D297FAE4317D1F98A",
+		"app_id":"103065259",
+		"package_name":"com.example.appsenasoft2020",
+		"api_key":"CgB6e3x9Oq992Wj7OL+Ld5ha2NS7C1/0nnd/6XKcvlvF48N+Pc0goDm3uAHk6RHE6OVW80hHA8q0s/YSrzHATKWX"
 	},
 	"configuration_version":"1.0"
 }

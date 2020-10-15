@@ -22,10 +22,10 @@ class RegisterConductorFragment : Fragment() {
         registerConductorViewModel =
                 ViewModelProvider(this).get(RegisterConductorViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_register_conductor, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        registerConductorViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        //val textView: TextView = root.findViewById(R.id.text_home)
+        //registerConductorViewModel.text.observe(viewLifecycleOwner, Observer {
+        //    textView.text = it
+        //})
         return root
     }
 }

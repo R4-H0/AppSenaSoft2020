@@ -22,10 +22,10 @@ class datosEmpresaFragment : Fragment() {
         datosEmpresaViewModel =
                 ViewModelProvider(this).get(datosEmpresaViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_register_empresa, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        datosEmpresaViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        //val textView: TextView = root.findViewById(R.id.text_home)
+       //// datosEmpresaViewModel.text.observe(viewLifecycleOwner, Observer {
+        //   textView.text = it
+       // })
         return root
     }
 }

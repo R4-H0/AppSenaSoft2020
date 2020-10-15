@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondor">
+    android:background="@drawable/fondo_register">
 
     <TextView
         android:id="@+id/textView"
@@ -42,7 +42,7 @@
         android:text="Conductor"
         android:textColor="#FF9800"
         android:textColorHighlight="#D31C1C"
-        android:textColorHint="#000000"
+        android:textColorHint="#Ffffff"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.127"
@@ -87,4 +87,5 @@
         app:srcCompat="@drawable/ic_pasajero"
         tools:layout_editor_absoluteX="240dp"
         tools:layout_editor_absoluteY="570dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
