@@ -8,6 +8,7 @@
 
     <com.google.android.material.card.MaterialCardView
 
+        android:id="@+id/materialCardView3"
         android:layout_width="374dp"
         android:layout_height="135dp"
         android:layout_marginTop="56dp"
@@ -66,16 +67,14 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="468dp"
-        android:layout_height="688dp"
-        android:layout_marginBottom="100dp"
-        android:rotationX="-180"
-        android:translationX="-20dp"
-        android:translationY="-300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/img_0"
-        tools:layout_editor_absoluteX="-30dp" />
+
+
+    <fragment
+        android:id="@+id/mapfragment_routeplanningdemo"
+        android:name="com.huawei.hms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        tools:layout_editor_absoluteX="-20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
