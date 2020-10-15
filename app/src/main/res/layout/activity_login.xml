@@ -23,43 +23,44 @@
         android:id="@+id/idBotonInicio"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="216dp"
         android:height="20dp"
-        android:backgroundTint="#FF9800"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/Secundary"
         android:text="Enviar"
-
         android:textColor="#EFEAEA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextFields"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.389"
         tools:layout_editor_absoluteX="45dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#000" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pass"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/TextFields"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="360dp"
         android:hint="@string/clave"
-
+        android:background="@color/blanco"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -67,8 +68,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/clave"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#000" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,28 +87,34 @@
         app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@drawable/ic_loginlogo" />
 
-    <Button
+    <ImageView
         android:id="@+id/buttonHuawei"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="109dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/logoew"
-        android:text=""
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/sign3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idBotonInicio" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
         android:id="@+id/loading"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.994"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHuawei" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="707dp"
+        android:layout_height="892dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHuawei"
+        app:srcCompat="@drawable/img_0"
+        tools:layout_editor_absoluteX="-181dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

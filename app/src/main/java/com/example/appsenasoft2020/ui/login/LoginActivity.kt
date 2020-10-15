@@ -1,6 +1,8 @@
 package com.example.appsenasoft2020.ui.login
 
 import android.app.Activity
+import android.content.ContentValues
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,29 +10,32 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import androidx.core.view.get
 
 
 import com.example.appsenasoft2020.R
-import com.google.android.material.textfield.TextInputLayout
+import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import java.lang.Exception
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
-
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_login)
-
-        val username = findViewById<TextInputLayout>(R.id.username)
-        val password = findViewById<TextInputLayout>(R.id.pass)
+        val username:TextInputEditText = findViewById(R.id.username)
+        val password:TextInputEditText = findViewById(R.id.clave)
         val login = findViewById<Button>(R.id.idBotonInicio)
         val loading = findViewById<ProgressBar>(R.id.loading)
 
@@ -69,16 +74,16 @@ class LoginActivity : AppCompatActivity() {
 
         username.afterTextChanged {
             loginViewModel.loginDataChanged(
-                username.toString(),
-                password.toString()
+                username.getText().toString() ,
+                password.getText().toString()
             )
         }
 
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                    username.getText().ToString(),
-                    password.toString()
+                    username.getText().toString() ,
+                    password.getText().toString()
                 )
             }
 
@@ -94,8 +99,32 @@ class LoginActivity : AppCompatActivity() {
             }
 
             login.setOnClickListener {
-                loading.visibility = View.VISIBLE
-                loginViewModel.login(username.toString(), password.toString())
+                auth = Firebase.auth
+                var correo=username.text.toString()
+                var pass = password.text.toString()
+                try {
+                    auth.signInWithEmailAndPassword(correo, pass)
+                            .addOnCompleteListener(this@LoginActivity) { task ->
+                                if (task.isSuccessful) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    val user = Firebase.auth.currentUser
+                                    Toast.makeText(this@LoginActivity,"Se inicio con exito",Toast.LENGTH_SHORT).show()
+                                 
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Toast.makeText(
+                                            baseContext, "Error al iniciar verifique sus datos",
+                                            Toast.LENGTH_SHORT
+                                    ).show()
+
+                                    // ...
+                                }
+
+                                // ...
+                            }
+                }catch (e: Exception){
+
+                }
             }
         }
     }
