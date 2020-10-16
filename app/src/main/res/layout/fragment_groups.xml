@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <ImageView
         android:id="@+id/imageView6"
@@ -14,5 +14,235 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_0"
         tools:layout_editor_absoluteX="0dp" />
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_btn_verde" />
+
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="328dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Grupos"
+        android:textColor="#F8F8F8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/materialCardView"
+                android:layout_width="269dp"
+                android:layout_height="89dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="#FFFFFF"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="5dp"
+                android:background="@color/blanco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    android:translationX="24dp"
+                    android:translationY="30dp" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Conductor.
+                                    Empresa: SENA
+                                    Cant. Pasajeros: 3"
+
+                    android:translationX="100dp"
+                    android:translationY="10dp" />
+
+                <Button
+                    android:id="@+id/btnViaje2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/materialCardView4"
+                android:layout_width="268dp"
+                android:layout_height="79dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="5dp"
+                android:background="@color/blanco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    android:translationX="24dp"
+                    android:translationY="30dp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="169dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pasajero.
+                                    Empresa: SENA
+                                    Conductor: Andrés Henao"
+                    android:translationX="100dp"
+                    android:translationY="10dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="188dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="252dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_btn" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="141dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="264dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Mis Grupos"
+        android:textColor="@color/verdeagua"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/materialCardView"
+                android:layout_width="269dp"
+                android:layout_height="89dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="420dp"
+                android:backgroundTint="#FFFFFF"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="5dp"
+                android:background="@color/blanco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    android:translationX="24dp"
+                    android:translationY="30dp" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Conductor.
+                                    Empresa: SENA
+                                    Cant. Pasajeros: 3"
+
+                    android:translationX="100dp"
+                    android:translationY="10dp" />
+
+                <Button
+                    android:id="@+id/btnViaje1"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/materialCardView2"
+                android:layout_width="268dp"
+                android:layout_height="79dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="5dp"
+                android:background="@color/blanco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_notifications_black_24dp"
+                    android:translationX="24dp"
+                    android:translationY="30dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="169dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pasajero.
+                                    Empresa: SENA
+                                    Conductor: Andrés Henao"
+                    android:translationX="100dp"
+                    android:translationY="10dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
