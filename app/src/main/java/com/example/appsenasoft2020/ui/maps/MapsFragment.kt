@@ -100,8 +100,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
                 1 -> {
                     val bundle: Bundle = msg.getData()
                     val errorMsg = bundle.getString("errorMsg")
-                    Toast.makeText(this@MapaActivity, errorMsg, Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(Mycontext, errorMsg, Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                 }
@@ -109,30 +108,6 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
-
-
-    class MapaActivity : AppCompatActivity(), OnMapReadyCallback {
-
-
-
-
-
-
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_mapa)
-
-            val fragment: Fragment? =
-                supportFragmentManager.findFragmentById(R.id.mapfragment_routeplanningdemo)
-            if (fragment is SupportMapFragment) {
-                mSupportMapFragment = fragment
-                mSupportMapFragment!!.getMapAsync(this)
-            }
-            edtOriginLat = findViewById(R.id.edt_origin_lat)
-            edtOriginLng = findViewById(R.id.edt_origin_lng)
-            edtDestinationLat = findViewById(R.id.edt_destination_lat)
-            edtDestinationLng = findViewById(R.id.edt_destination_lng)
-        }
 
         override fun onMapReady(huaweiMap: HuaweiMap) {
             hMap = huaweiMap
@@ -296,8 +271,3 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         }
 
     }
-
-    override fun onMapReady(p0: HuaweiMap?) {
-        TODO("Not yet implemented")
-    }
-}

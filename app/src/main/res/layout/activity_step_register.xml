@@ -22,4 +22,10 @@
 
     <include layout="@layout/content_step_register" />
 
+    <Button
+        android:id="@+id/fab"
+        android:layout_width="358dp"
+        android:layout_height="294dp"
+        android:text="Button" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
