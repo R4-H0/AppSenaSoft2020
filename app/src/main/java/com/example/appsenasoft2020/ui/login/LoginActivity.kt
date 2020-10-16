@@ -38,8 +38,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         val username:TextInputEditText = findViewById(R.id.CorreoP)
         val password:TextInputEditText = findViewById(R.id.clave)
-        val login = findViewById<Button>(R.id.idBotonInicio)
-        val loading = findViewById<ProgressBar>(R.id.loading)
+        val login = findViewById<Button>(R.id.idBotonsegunda)
+     //  val loading = findViewById<ProgressBar>(R.id.loading)
         val register = findViewById<TextView>(R.id.btnRegistro)
         val loginHuawei = findViewById<ImageView>(R.id.buttonHuawei)
 
@@ -74,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.loginResult.observe(this@LoginActivity, Observer {
             val loginResult = it ?: return@Observer
 
-            loading.visibility = View.GONE
+            //loading.visibility = View.GONE
             if (loginResult.error != null) {
                 showLoginFailed(loginResult.error)
             }

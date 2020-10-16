@@ -9,19 +9,13 @@
     <com.google.android.material.card.MaterialCardView
 
         android:id="@+id/materialCardView3"
-        android:layout_width="374dp"
-        android:layout_height="135dp"
+        android:layout_width="285dp"
+        android:layout_height="134dp"
         android:layout_marginTop="56dp"
         android:checkable="true"
         android:clickable="true"
         android:focusable="true"
         android:padding="60dp"
-        android:paddingStart="60dp"
-        android:paddingLeft="60dp"
-        android:paddingTop="60dp"
-        android:paddingEnd="60dp"
-        android:paddingRight="60dp"
-        android:paddingBottom="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +31,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.389"
-            tools:layout_editor_absoluteX="45dp">
+            tools:layout_editor_absoluteX="45dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -56,7 +52,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.389"
-            tools:layout_editor_absoluteX="45dp">
+            tools:layout_editor_absoluteX="45dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -68,13 +66,12 @@
     </com.google.android.material.card.MaterialCardView>
 
 
-
     <fragment
         android:id="@+id/mapfragment_routeplanningdemo"
         android:name="com.huawei.hms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
