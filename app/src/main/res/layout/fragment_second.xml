@@ -4,24 +4,210 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    android:background="@color/blanco"
+    android:orientation="horizontal"
+    tools:context=".ui.StepRegister.SecondFragment">
 
-    <TextView
-        android:id="@+id/textview_second"
+    <Button
+        android:id="@+id/textButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
+        android:layout_marginTop="64dp"
+        android:text="Informacion personal"
+        android:textColor="@color/Secundary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/previous"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/clave2"
+        style="@style/TextFields"
+        android:layout_width="174dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="232dp"
+        android:hint="@string/clave2"
+        android:textColorHint="@color/Primary"
+        app:boxStrokeColor="@color/Primary"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/Primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:suffixTextColor="@color/Primary">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/clave1"
+        style="@style/TextFields"
+        android:layout_width="174dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="232dp"
+        android:hint="@string/clave1"
+        android:textColorHint="@color/Primary"
+        app:boxStrokeColor="@color/Primary"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:suffixTextColor="@color/Primary">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/apellidop"
+        style="@style/TextFields"
+        android:layout_width="168dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="28dp"
+        android:hint="@string/apellido"
+        android:textColorHint="@color/Primary"
+        app:boxStrokeColor="@color/Primary"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:suffixTextColor="@color/Primary">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nombrep"
+        style="@style/TextFields"
+        android:layout_width="174dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/nombre"
+        android:textColorHint="@color/Primary"
+        app:boxStrokeColor="@color/Primary"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379"
+        app:suffixTextColor="@color/Primary">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/documentop"
+        style="@style/TextFields"
+        android:layout_width="342dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="520dp"
+        android:hint="@string/documento"
+        android:textColorHint="@color/Primary"
+        app:boxStrokeColor="@color/Primary"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:suffixTextColor="@color/Primary">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CorreoP"
+        style="@style/TextFields"
+        android:layout_width="342dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="320dp"
+        android:hint="@string/email"
+        android:textColorHint="@color/Primary"
+        app:boxStrokeColor="@color/Primary"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:suffixTextColor="@color/Primary">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/telefonoP"
+        style="@style/TextFields"
+        android:layout_width="342dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="132dp"
+        android:hint="@string/telefono"
+        android:textColorHint="@color/Primary"
+        app:boxStrokeColor="@color/Primary"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:suffixTextColor="@color/Primary">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/idBotonInicio"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:height="20dp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/Secundary"
+        android:text="Enviar"
+        android:textColor="#EFEAEA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,6 @@
 package com.example.appsenasoft2020.ui.login
 
 import android.app.Activity
-import android.content.ContentValues
 import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -22,13 +21,11 @@ import com.huawei.hms.support.hwid.request.HuaweiIdAuthParamsHelper
 
 
 import com.example.appsenasoft2020.R
-import com.example.appsenasoft2020.RegisterActivity
-import com.example.appsenasoft2020.RegisterForm
+import com.example.appsenasoft2020.StepRegisterActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.huawei.hms.support.hwid.service.HuaweiIdAuthService
 import java.lang.Exception
 
 class LoginActivity : AppCompatActivity() {
@@ -39,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_login)
-        val username:TextInputEditText = findViewById(R.id.username)
+        val username:TextInputEditText = findViewById(R.id.CorreoP)
         val password:TextInputEditText = findViewById(R.id.clave)
         val login = findViewById<Button>(R.id.idBotonInicio)
         val loading = findViewById<ProgressBar>(R.id.loading)
@@ -150,7 +147,7 @@ class LoginActivity : AppCompatActivity() {
 
 
             register.setOnClickListener{
-              var intent:Intent = Intent(this@LoginActivity, RegisterForm::class.java)
+              var intent:Intent = Intent(this@LoginActivity, StepRegisterActivity::class.java)
                 startActivity(intent)
             }
 
