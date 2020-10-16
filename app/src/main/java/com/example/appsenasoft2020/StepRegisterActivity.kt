@@ -9,7 +9,7 @@ class StepRegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_step_register)
+        setContentView(R.layout.fragment_first)
         setSupportActionBar(findViewById(R.id.toolbar))
 
 
